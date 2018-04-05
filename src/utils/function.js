@@ -38,29 +38,30 @@
  * Released under the MIT License.
  */
 
-import $ from 'jquery';
+// import $ from 'jquery';
 
-export const Function1 = () => {
+export const Function1 = (event) => {
 	function getClass(dom,string) {
 		return dom.getElementsByClassName(string);
 	}
 	//构造器
 	function MobileSelect(config) {
-		this.mobileSelect;
-		this.wheelsData = config.wheels;
+		this.mobileSelect()
+		this.wheelsData.months = ['January','Febuary','March','April','May','June','July','August','September','October','November','December'];
+		this.wheelsData.year = ['1','2'];
 		this.jsonType =  false;
 		this.cascadeJsonData = [];
 		this.displayJson = [];
 		this.curValue = null;
 		this.curIndexArr = [];
 		this.cascade = false;
-		this.startY;
-		this.moveEndY;
-		this.moveY;
-		this.oldMoveY;
+		this.startY();
+		this.moveEndY();
+		this.moveY();
+		this.oldMoveY();
 		this.offset = 0;
 		this.offsetSum = 0;
-		this.oversizeBorder;
+		this.oversizeBorder();
 		this.curDistance = [];
 		this.clickStatus = false;
 		this.isPC = true;
@@ -93,7 +94,7 @@ export const Function1 = () => {
 			_this.initPosition = config.position || [];
 			_this.titleText = config.title || '';
 			_this.connector = config.connector || ' ';
-			_this.triggerDisplayData = !(typeof(config.triggerDisplayData)=='undefined') ? config.triggerDisplayData : true;
+			_this.triggerDisplayData = !(typeof(config.triggerDisplayData)==='undefined') ? config.triggerDisplayData : true;
 			_this.trigger.style.cursor='pointer';
 			_this.setStyle(config);
 			_this.setTitle(_this.titleText);
@@ -127,7 +128,7 @@ export const Function1 = () => {
 			    }
 				var tempValue ='';
 		    	for(var i=0; i<_this.wheel.length; i++){
-		    		i==_this.wheel.length-1 ? tempValue += _this.getInnerHtml(i) : tempValue += _this.getInnerHtml(i) + _this.connector;
+		    		i===_this.wheel.length-1 ? tempValue += _this.getInnerHtml(i) : tempValue += _this.getInnerHtml(i) + _this.connector;
 		    	}
 		    	if(_this.triggerDisplayData){
 		    		_this.trigger.innerHTML = tempValue;
@@ -191,14 +192,14 @@ export const Function1 = () => {
 		checkIsPC: function(){
 			var _this = this;
 			var sUserAgent = navigator.userAgent.toLowerCase();
-			var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-			var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-			var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-			var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-			var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-			var bIsAndroid = sUserAgent.match(/android/i) == "android";
-			var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-			var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+			var bIsIpad = sUserAgent.match(/ipad/i) === "ipad";
+			var bIsIphoneOs = sUserAgent.match(/iphone os/i) === "iphone os";
+			var bIsMidp = sUserAgent.match(/midp/i) === "midp";
+			var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) === "rv:1.2.3.4";
+			var bIsUc = sUserAgent.match(/ucweb/i) === "ucweb";
+			var bIsAndroid = sUserAgent.match(/android/i) === "android";
+			var bIsCE = sUserAgent.match(/windows ce/i) === "windows ce";
+			var bIsWM = sUserAgent.match(/windows mobile/i) === "windows mobile";
 			if ((bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM)) {
 			    _this.isPC = false;
 			}
@@ -257,7 +258,7 @@ export const Function1 = () => {
 						tempHTML += '<li data-id="'+wheelsData[i].data[j][_this.keyMap.id]+'">'+wheelsData[i].data[j][_this.keyMap.value]+'</li>';
 					}
 				}else{
-					for(var j=0; j<wheelsData[i].data.length; j++){
+					for( j=0; j<wheelsData[i].data.length; j++){
 					//行
 						tempHTML += '<li>'+wheelsData[i].data[j]+'</li>';
 					}
@@ -305,7 +306,7 @@ export const Function1 = () => {
 
 		checkDataType: function(){
 			var _this = this;
-			if(typeof(_this.wheelsData[0].data[0])=='object'){
+			if(typeof(_this.wheelsData[0].data[0])==='object'){
 				_this.jsonType = true;
 			}
 		},
@@ -385,8 +386,8 @@ export const Function1 = () => {
 				_this.displayJson.pop(); //修改 displayJson
 			}
 			var resultNode;
-			for (var i = 0; i <= index; i++){
-				if (i == 0)
+			for ( i = 0; i <= index; i++){
+				if (i === 0)
 					resultNode = _this.cascadeJsonData[posIndexArr[0]];
 				else {
 					resultNode = resultNode[_this.keyMap.childs][posIndexArr[i]];
@@ -410,11 +411,11 @@ export const Function1 = () => {
 				}
 			}else if(_this.slider.length < posIndexArr.length){
 				tempCount = posIndexArr.length - _this.slider.length;
-				for(var i=0; i<tempCount; i++){
+				for( i=0; i<tempCount; i++){
 					tempPosArr.pop();
 				}
 			}
-			for(var i=index+1; i< tempPosArr.length; i++){
+			for( i=index+1; i< tempPosArr.length; i++){
 				tempPosArr[i] = 0;
 			}
 			return tempPosArr;
@@ -429,7 +430,7 @@ export const Function1 = () => {
 					_this.wheels.removeChild(_this.wheel[_this.wheel.length-1]);
 				}
 			}
-			for(var i=0; i<_this.displayJson.length; i++){
+			for( i=0; i<_this.displayJson.length; i++){
 			//列
 				(function (i) {
 					var tempHTML='';
@@ -445,7 +446,7 @@ export const Function1 = () => {
 						var tempWheel = document.createElement("div");
 						tempWheel.className = "wheel";
 						tempHTML = '<ul class="selectContainer">';
-						for(var j=0; j<_this.displayJson[i].length; j++){
+						for(j=0; j<_this.displayJson[i].length; j++){
 						//行
 							tempHTML += '<li data-id="'+_this.displayJson[i][j][_this.keyMap.id]+'">'+_this.displayJson[i][j][_this.keyMap.value]+'</li>';
 						}
@@ -490,7 +491,7 @@ export const Function1 = () => {
 				}
 				_this.wheelsData[sliderIndex] = {data: data};
 	    	}else{
-				for(var j=0; j<data.length; j++){
+				for( j=0; j<data.length; j++){
 					tempHTML += '<li>'+data[j]+'</li>';
 				}
 				_this.wheelsData[sliderIndex] = data;
@@ -529,11 +530,11 @@ export const Function1 = () => {
 		    	}
 	    	}
 	    	else if(_this.jsonType){
-		    	for(var i=0; i<_this.curDistance.length; i++){
+		    	for( i=0; i<_this.curDistance.length; i++){
 		    		temp.push(_this.wheelsData[i].data[_this.getIndex(_this.curDistance[i])]);
 		    	}
 	    	}else{
-		    	for(var i=0; i<_this.curDistance.length; i++){
+		    	for( i=0; i<_this.curDistance.length; i++){
 		    		temp.push(_this.getInnerHtml(i));
 		    	}
 	    	}
@@ -578,17 +579,17 @@ export const Function1 = () => {
 
 	    updateCurDistance: function(theSlider, index){
 	        if(theSlider.style.transform){
-				this.curDistance[index] = parseInt(theSlider.style.transform.split(',')[1]);
+				this.curDistance[index] = parseInt(theSlider.style.transform.split(',')[1],10);
 	        }else{
-				this.curDistance[index] = parseInt(theSlider.style.webkitTransform.split(',')[1]);
+				this.curDistance[index] = parseInt(theSlider.style.webkitTransform.split(',')[1],10);
 	        }
 	    },
 
 	    getDistance:function(theSlider){
 	    	if(theSlider.style.transform){
-	    		return parseInt(theSlider.style.transform.split(',')[1]);
+	    		return parseInt(theSlider.style.transform.split(',')[1],10);
 	    	}else{
-	    		return parseInt(theSlider.style.webkitTransform.split(',')[1]);
+	    		return parseInt(theSlider.style.webkitTransform.split(',')[1],10);
 	    	}
 	    },
 
@@ -604,21 +605,21 @@ export const Function1 = () => {
 	    	switch(event.type){
 	    		case "touchstart":
 			        _this.startY = event.touches[0].clientY;
-			        _this.startY = parseInt(_this.startY);
+			        _this.startY = parseInt(_this.startY,10);
 			        _this.oldMoveY = _this.startY;
 	    			break;
 
 	    		case "touchend":
 
-			        _this.moveEndY = parseInt(event.changedTouches[0].clientY);
+			        _this.moveEndY = parseInt(event.changedTouches[0].clientY,10);
 			        _this.offsetSum = _this.moveEndY - _this.startY;
 					_this.oversizeBorder = -(theSlider.getElementsByTagName('li').length-3)*_this.liHeight;
 
-					if(_this.offsetSum == 0){
+					if(_this.offsetSum === 0){
 						//offsetSum为0,相当于点击事件
 						// 0 1 [2] 3 4
-						var clickOffetNum = parseInt((document.documentElement.clientHeight - _this.moveEndY)/40);
-						if(clickOffetNum!=2){
+						var clickOffetNum = parseInt((document.documentElement.clientHeight - _this.moveEndY)/40,10);
+						if(clickOffetNum!==2){
 							var offset = clickOffetNum - 2;
 							var newDistance = _this.curDistance[index] + (offset*_this.liHeight);
 							if((newDistance <= 2*_this.liHeight) && (newDistance >= _this.oversizeBorder) ){
@@ -684,9 +685,9 @@ export const Function1 = () => {
 			        _this.offsetSum = _this.moveEndY - _this.startY;
 					_this.oversizeBorder = -(theSlider.getElementsByTagName('li').length-3)*_this.liHeight;
 
-					if(_this.offsetSum == 0){
-						var clickOffetNum = parseInt((document.documentElement.clientHeight - _this.moveEndY)/40);
-						if(clickOffetNum!=2){
+					if(_this.offsetSum === 0){
+						var clickOffetNum = parseInt((document.documentElement.clientHeight - _this.moveEndY)/40,10);
+						if(clickOffetNum!==2){
 							var offset = clickOffetNum - 2;
 							var newDistance = _this.curDistance[index] + (offset*_this.liHeight);
 							if((newDistance <= 2*_this.liHeight) && (newDistance >= _this.oversizeBorder) ){
@@ -740,9 +741,9 @@ export const Function1 = () => {
 
 	};
 	var define;
-	if (typeof exports == "object") {
+	if (typeof exports === "object") {
 		module.exports = MobileSelect;
-	} else if (typeof define == "function" && define.amd) {
+	} else if (typeof define === "function" && define.amd) {
 		define([], function () {
 			return MobileSelect;
 		})
