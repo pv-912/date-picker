@@ -1,0 +1,439 @@
+{
+    "template_type": "slot_picker",
+    "selection_color": "#000000",
+    "secondary_color": "#808080",
+    "title": "Available Slots for Dr. Sumit",
+    "available_slots": [
+      {
+        "date": "01 April",
+        "date_slots": [
+          
+        ]
+      },
+      {
+        "date": "02 April",
+        "date_slots": [
+          {
+            "hour": "2",
+            "hour_slots": [
+              {
+                "02:00 PM": "slotId202"
+              },
+              {
+                "02:15 PM": "slotId208"
+              },
+              {
+                "02:30 PM": "slotId202"
+              },
+              {
+                "02:45 PM": "slotId208"
+              }
+            ]
+          },
+          {
+            "hour": "3",
+            "hour_slots": [
+              {
+                "03:20 PM": "slotId105"
+              },
+              {
+                "03:40 PM": "slotId105"
+              },
+              {
+                "03:50 PM": "slotId106"
+              }
+            ]
+          },
+          {
+            "hour": "4",
+            "hour_slots": [
+              {
+                "04:30 PM": "slotId105"
+              },
+              {
+                "04:50 PM": "slotId106"
+              }
+            ]
+          },
+          {
+            "hour": "5",
+            "hour_slots": [
+              {
+                "05:30 PM": "slotId202"
+              },
+              {
+                "05:45 PM": "slotId208"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "date": "03 April",
+        "date_slots": [
+          
+        ]
+      },
+      {
+        "date": "04 April",
+        "date_slots": [
+          {
+            "hour": "2",
+            "hour_slots": [
+              {
+                "02:00 PM": "slotId202"
+              },
+              {
+                "02:15 PM": "slotId208"
+              },
+              {
+                "02:30 PM": "slotId202"
+              },
+              {
+                "02:45 PM": "slotId208"
+              }
+            ]
+          },
+          {
+            "hour": "3",
+            "hour_slots": [
+              {
+                "03:20 PM": "slotId105"
+              },
+              {
+                "03:40 PM": "slotId105"
+              },
+              {
+                "03:50 PM": "slotId106"
+              }
+            ]
+          },
+          {
+            "hour": "4",
+            "hour_slots": [
+              {
+                "04:30 PM": "slotId105"
+              },
+              {
+                "04:50 PM": "slotId106"
+              }
+            ]
+          },
+          {
+            "hour": "5",
+            "hour_slots": [
+              {
+                "05:30 PM": "slotId202"
+              },
+              {
+                "05:45 PM": "slotId208"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "date": "05 April",
+        "date_slots": [
+          
+        ]
+      },
+      {
+        "date": "06 April",
+        "date_slots": [
+          {
+            "hour": "4",
+            "hour_slots": [
+              {
+                "04:30 PM": "slotId105"
+              },
+              {
+                "04:50 PM": "slotId106"
+              }
+            ]
+          },
+          {
+            "hour": "5",
+            "hour_slots": [
+              {
+                "05:30 PM": "slotId202"
+              },
+              {
+                "05:45 PM": "slotId208"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "date": "07 April",
+        "date_slots": [
+          {
+            "hour": "3",
+            "hour_slots": [
+              {
+                "03:20 PM": "slotId105"
+              },
+              {
+                "03:40 PM": "slotId105"
+              },
+              {
+                "03:50 PM": "slotId106"
+              }
+            ]
+          },
+          {
+            "hour": "4",
+            "hour_slots": [
+              {
+                "04:30 PM": "slotId105"
+              },
+              {
+                "04:50 PM": "slotId106"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "date": "08 April",
+        "date_slots": [
+          {
+            "hour": "4",
+            "hour_slots": [
+              {
+                "04:30 PM": "slotId105"
+              },
+              {
+                "04:50 PM": "slotId106"
+              }
+            ]
+          },
+          {
+            "hour": "5",
+            "hour_slots": [
+              {
+                "05:30 PM": "slotId202"
+              },
+              {
+                "05:45 PM": "slotId208"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "date": "09 April",
+        "date_slots": [
+          {
+            "hour": "3",
+            "hour_slots": [
+              {
+                "03:20 PM": "slotId105"
+              },
+              {
+                "03:40 PM": "slotId105"
+              },
+              {
+                "03:50 PM": "slotId106"
+              }
+            ]
+          },
+          {
+            "hour": "4",
+            "hour_slots": [
+              {
+                "04:30 PM": "slotId105"
+              },
+              {
+                "04:50 PM": "slotId106"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "date": "10 April",
+        "date_slots": [
+          {
+            "hour": "4",
+            "hour_slots": [
+              {
+                "04:30 PM": "slotId105"
+              },
+              {
+                "04:50 PM": "slotId106"
+              }
+            ]
+          },
+          {
+            "hour": "5",
+            "hour_slots": [
+              {
+                "05:30 PM": "slotId202"
+              },
+              {
+                "05:45 PM": "slotId208"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "date": "11 April",
+        "date_slots": [
+          {
+            "hour": "3",
+            "hour_slots": [
+              {
+                "03:20 PM": "slotId105"
+              },
+              {
+                "03:40 PM": "slotId105"
+              },
+              {
+                "03:50 PM": "slotId106"
+              }
+            ]
+          },
+          {
+            "hour": "4",
+            "hour_slots": [
+              {
+                "04:30 PM": "slotId105"
+              },
+              {
+                "04:50 PM": "slotId106"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "date": "12 April",
+        "date_slots": [
+          {
+            "hour": "4",
+            "hour_slots": [
+              {
+                "04:30 PM": "slotId105"
+              },
+              {
+                "04:50 PM": "slotId106"
+              }
+            ]
+          },
+          {
+            "hour": "5",
+            "hour_slots": [
+              {
+                "05:30 PM": "slotId202"
+              },
+              {
+                "05:45 PM": "slotId208"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "date": "13 April",
+        "date_slots": [
+          
+        ]
+      },
+      {
+        "date": "14 April",
+        "date_slots": [
+          {
+            "hour": "4",
+            "hour_slots": [
+              {
+                "04:30 PM": "slotId105"
+              },
+              {
+                "04:50 PM": "slotId106"
+              }
+            ]
+          },
+          {
+            "hour": "5",
+            "hour_slots": [
+              {
+                "05:30 PM": "slotId202"
+              },
+              {
+                "05:45 PM": "slotId208"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "date": "15 April",
+        "date_slots": [
+          {
+            "hour": "3",
+            "hour_slots": [
+              {
+                "03:20 PM": "slotId105"
+              },
+              {
+                "03:40 PM": "slotId105"
+              },
+              {
+                "03:50 PM": "slotId106"
+              }
+            ]
+          },
+          {
+            "hour": "4",
+            "hour_slots": [
+              {
+                "04:30 PM": "slotId105"
+              },
+              {
+                "04:50 PM": "slotId106"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "date": "16 April",
+        "date_slots": [
+          
+        ]
+      },
+      {
+        "date": "17 April",
+        "date_slots": [
+          {
+            "hour": "3",
+            "hour_slots": [
+              {
+                "03:20 PM": "slotId105"
+              },
+              {
+                "03:40 PM": "slotId105"
+              },
+              {
+                "03:50 PM": "slotId106"
+              }
+            ]
+          },
+          {
+            "hour": "4",
+            "hour_slots": [
+              {
+                "04:30 PM": "slotId105"
+              },
+              {
+                "04:50 PM": "slotId106"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+}

@@ -1,22 +1,16 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import './App.css';
-import HomeIndex from './components/Index';
-// import {Function1} from './components/utils/function';
+import MainIndex from './components/Index';
 
 class App extends Component {
-   // componentWillMount(){
-  //   Function1();
-  // }
   render() {
     return (
-      <BrowserRouter>
+      <Router>
         <Switch>
-          <Route exact path="/" component={HomeIndex} />
-          <Route path="/test" component={HomeIndex} />
+          <Route exact path="/" component={MainIndex} />
         </Switch>
-      </BrowserRouter>
+      </Router>
     );
   }
 }
